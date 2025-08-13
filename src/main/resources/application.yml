@@ -11,10 +11,9 @@ spring:
       max-file-size: 2GB
       max-request-size: 20GB
       enabled: true
-
 ---
 server:
-  port: 8080
+  port: 9821
 spring:
   config:
     activate:
