@@ -1,3 +1,63 @@
 spring:
   application:
     name: smarty_backend
+  profiles:
+    group:
+      local: local
+      dev:  dev
+      test: test
+  servlet:
+    multipart:
+      max-file-size: 2GB
+      max-request-size: 20GB
+      enabled: true
+
+---
+server:
+  port: 8080
+spring:
+  config:
+    activate:
+      on-profile: local
+  ai:
+    vertex:
+      ai:
+        gemini:
+          project-id:
+          location:
+          chat:
+            options:
+              model:
+          api-endpoint:
+  datasource:
+    url: jdbc:postgresql://aws-0-ap-northeast-2.pooler.supabase.com:5432/postgres?sslmode=require&preferQueryMode=simple
+    username: postgres.wxsxcjqnzfbkpcwhyfvt
+    password: smarty12!@
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 0
+      idle-timeout: 30000        # 30s
+      max-lifetime: 600000       # 10m
+      connection-timeout: 20000  # 20s
+    jpa:
+      hibernate:
+        ddl-auto: none           # ?? ???. ??? validate ??
+      show-sql: true
+      properties:
+        hibernate.format_sql: true
+    logging:
+      level:
+        root: debug
+        kr.co.works.smarty_backend: debug
+
+
+
+---
+spring doc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+

@@ -62,6 +62,9 @@ dependencies {
     //logback
     implementation("org.springframework.boot:spring-boot-starter-logging")
 
+    //drools
+    implementation("org.drools:drools-rules-spring-boot-starter:10.1.0")
+
     // test
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
