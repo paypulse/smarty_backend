@@ -15,3 +15,9 @@
 
 # ** Smarty system structure ** 
 ![My Logo](image/smarty_system_structure.png)
+
+
+# ** LLM 설정 **
+```
+   [gemini key] :  .env 파일에 셋팅해서 사용하기 
+```

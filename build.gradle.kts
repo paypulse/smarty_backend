@@ -44,8 +44,9 @@ dependencies {
     //kotlin
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    //LLM. Google gemini (vertex AI)
-    implementation("org.springframework.ai:spring-ai-starter-model-vertex-ai-gemini:1.0.1")
+    //LLM. Google gemini (API, 키 방식)
+    implementation("org.springframework.ai:spring-ai-starter-model-openai:1.0.1")
+
     //크롤링
     implementation("org.jsoup:jsoup:1.18.1")
     //JWT 발급(서명)용

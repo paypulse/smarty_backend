@@ -20,15 +20,13 @@ spring:
     activate:
       on-profile: local
   ai:
-    vertex:
-      ai:
-        gemini:
-          project-id:
-          location:
-          chat:
-            options:
-              model:
-          api-endpoint:
+    openai:
+      api-key: AIzaSyAJ5o_KTiC4XF8C9BrRsoF8fbiokrc24tM
+      base-url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+      chat:
+        completions-path: /chat/completions
+        options:
+          model: gemini-2.0-flash
   datasource:
     url: jdbc:postgresql://aws-0-ap-northeast-2.pooler.supabase.com:5432/postgres?sslmode=require&preferQueryMode=simple
     username: postgres.wxsxcjqnzfbkpcwhyfvt
